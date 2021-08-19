@@ -1,6 +1,7 @@
 function indexOf(isMatch, elements) {
     if (Array.isArray(elements)) {
         for (let index = 0, length = elements.length; index < length; index++) {
+            //why use length variable?
             if (isMatch(elements[index], index, elements)) {
                 return index;
             }
