@@ -32,3 +32,9 @@ function numberIs5(value) {
 }
 
 console.log(indexOf(numberIs5, [1, 3, 5, 7, 9]));
+
+//brute force algorithm
+//worst case (array does not contain searched element) complexity is O(n); 
+//n = number of elements in the array
+//best case (searched element is array[0]) complexity is O(1);
+//average case is O(n);
