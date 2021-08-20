@@ -1,21 +1,45 @@
+//non-iterative
+// function factorial(number) {
+//     console.log('Forward phase', number);
+
+//     //base case
+//     if (number <= 1) {
+//         console.log('base case', number);
+//         return 1;
+//     }
+
+//     //recursive case
+//     //function calls itself to calculate factorial(number-1)
+//     const numberMinusOneFactorial = factorial(number -1);
+
+//     console.log('Backwards phase', number, '*', numberMinusOneFactorial);
+
+//     return number * numberMinusOneFactorial;
+// }
+
+//iterive
 function factorial(number) {
-    console.log('Forward phase', number);
-
-    //base case
+    // Base case
     if (number <= 1) {
-        console.log('base case', number);
-        return 1;
+      return 1;
     }
+  
+    // Penultimate means second to the last in a series.
+    let penultimate = 1;
+    let total = 0;
+  
+    // Calculate the factorial from 1 to `number`
+    for (let ultimate = 1; ultimate <= number; ultimate++) {
+      console.log(ultimate, "*", penultimate);
+      total = ultimate * penultimate;
+      penultimate = total;
+    }
+    return total;
+  }
 
-    //recursive case
-    //function calls itself to calculate factorial(number-1)
-    const numberMinusOneFactorial = factorial(number -1);
-
-    console.log('Backwards phase', number, '*', numberMinusOneFactorial);
-
-    return number * numberMinusOneFactorial;
-}
 console.log(factorial(5));
+
+//iterive recursive functions allow you to avoid stackoverflow errors
 
 
 /**the forward phase is breaking down the problem into increasingly
