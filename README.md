@@ -2,3 +2,4 @@
 A collection of common searching and sorting algorithms:
 #  -Linear Search
 #  -Binary Search
+#  -Recursive Searches
