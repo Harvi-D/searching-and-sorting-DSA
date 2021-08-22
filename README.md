@@ -4,3 +4,4 @@ A collection of common searching and sorting algorithms:
 #  -Binary Search
 #  -Recursive Searches
 #  -Bubble Sort
+#  -Merge Sort
