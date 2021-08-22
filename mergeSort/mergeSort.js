@@ -9,7 +9,7 @@ function mergeSort(compare, elements) {
         const leftElements = elements.slice(0, middle);
         const rightElements = elements.slice(middle);
 
-        const leftElementsSorted = mergeSort(compare, leftElements)
+        const leftElementsSorted = mergeSort(compare, leftElements);
         const rightElementsSorted = mergeSort(compare, rightElements);
 
         return merge(compare, leftElementsSorted, rightElementsSorted);
